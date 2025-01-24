@@ -1,0 +1,23 @@
+{
+  "name": "home-fixer",
+  "version": "0.0.1",
+  "description": "A script that fixes homes for a sethome plugin",
+  "homepage": "https://github.com/CubeBeveled/sethome-parser#readme",
+  "bugs": {
+    "url": "https://github.com/CubeBeveled/sethome-parser/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CubeBeveled/sethome-parser.git"
+  },
+  "license": "ISC",
+  "author": "Beveled Cube",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

@@ -1,8 +1,17 @@
 const fs = require("fs");
 const yaml = require("js-yaml");
 
-let data = yaml.load(fs.readFileSync("homes.yml", "utf8"));
-console.log(data)
+const data = new Map(Object.entries(yaml.load(fs.readFileSync("homes.yml", "utf8"))));
 
-//data.homes = data.homes.filter(home => home.world !== null);
-//fs.writeFileSync("homes.yml", yaml.dump(data));
+if (!fs.existsSync("playerdata")) fs.mkdirSync("playerdata");
+
+data.forEach((v, k) => {
+  const homes = {};
+  const oldHomes = new Map(Object.entries(v));
+
+  oldHomes.forEach((vv, kk) => {
+    homes[kk] = vv;
+  });
+
+  fs.writeFileSync(`playerdata/${k}.yml`, JSON.stringify({ homes }, null, 2));
+});

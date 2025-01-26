@@ -1,0 +1,2 @@
+# Sethome parser
+Basically converts homes from [this plugin](https://modrinth.com/plugin/sethome) (absolute dogshit) to [this plugin](https://www.spigotmc.org/resources/%E3%80%90ultimatehomes%E3%80%91-highly-configurable-player-sethome-system-1-8-1-21.64210/) (better ig)

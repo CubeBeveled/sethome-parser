@@ -13,5 +13,5 @@ data.forEach((v, k) => {
     homes[kk] = vv;
   });
 
-  fs.writeFileSync(`playerdata/${k}.yml`, JSON.stringify({ homes }, null, 2));
+  fs.writeFileSync(`playerdata/${k}.yml`, yaml.dump({ homes }));
 });
